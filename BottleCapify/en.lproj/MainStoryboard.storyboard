@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4504" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="eAG-T5-lGK">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3734.1"/>
+    </dependencies>
+    <scenes>
+        <!--Image View Controller - Bottle Capify-->
+        <scene sceneID="hiJ-ik-Tte">
+            <objects>
+                <viewController storyboardIdentifier="MainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ABB-B7-A3y" customClass="ImageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Rh-x5-a7n">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sz2-3g-D5q">
+                                <rect key="frame" x="0.0" y="460" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Photo Library" id="WeC-Uh-01P">
+                                        <connections>
+                                            <action selector="libraryClick:" destination="ABB-B7-A3y" id="rt4-Pj-VHQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4re-JG-pUO"/>
+                                    <barButtonItem systemItem="camera" id="aJD-go-lSj">
+                                        <connections>
+                                            <action selector="cameraClick:" destination="ABB-B7-A3y" id="j3T-bh-Dc1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xhK-lr-Vyk">
+                                <rect key="frame" x="101" y="116" width="118" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="pWr-bH-dWG"/>
+                                </constraints>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Step 1: Choose Tile Size" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHp-kA-eRJ">
+                                <rect key="frame" x="65" y="59" width="209" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="TbL-ln-hPi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Step 2: Select Input Image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yW-9l-2oZ">
+                                <rect key="frame" x="58" y="415" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sz2-3g-D5q" firstAttribute="leading" secondItem="8Rh-x5-a7n" secondAttribute="leading" type="default" id="3lI-jd-tp5"/>
+                            <constraint firstItem="7yW-9l-2oZ" firstAttribute="centerX" secondItem="Sz2-3g-D5q" secondAttribute="centerX" type="default" id="591-PZ-aSc"/>
+                            <constraint firstItem="Sz2-3g-D5q" firstAttribute="bottom" secondItem="8Rh-x5-a7n" secondAttribute="bottom" type="default" id="7lJ-zx-Ze6"/>
+                            <constraint firstItem="Sz2-3g-D5q" firstAttribute="trailing" secondItem="8Rh-x5-a7n" secondAttribute="trailing" type="default" id="Gft-hP-zBu"/>
+                            <constraint firstItem="xhK-lr-Vyk" firstAttribute="centerX" secondItem="7yW-9l-2oZ" secondAttribute="centerX" type="default" id="L0K-b3-sDT"/>
+                            <constraint firstItem="xhK-lr-Vyk" firstAttribute="top" secondItem="8Rh-x5-a7n" secondAttribute="top" constant="116" id="bL6-hp-QfA"/>
+                            <constraint firstAttribute="bottom" secondItem="7yW-9l-2oZ" secondAttribute="bottom" constant="68" id="dTV-Lv-GbH"/>
+                            <constraint firstItem="bHp-kA-eRJ" firstAttribute="top" secondItem="8Rh-x5-a7n" secondAttribute="top" constant="59" id="o5h-jL-FEZ"/>
+                            <constraint firstItem="bHp-kA-eRJ" firstAttribute="leading" secondItem="8Rh-x5-a7n" secondAttribute="leading" constant="65" id="oOk-af-6bK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bottle Capify" id="naZ-zW-gX2"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="aJD-go-lSj" id="RjQ-FI-FZV"/>
+                        <outlet property="tileSizeSlider" destination="xhK-lr-Vyk" id="QFm-j0-TT5"/>
+                        <outlet property="toolbar" destination="Sz2-3g-D5q" id="V9H-BW-ggg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QHJ-aY-wPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="358" y="-147"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OKn-EQ-pbC">
+            <objects>
+                <navigationController id="eAG-T5-lGK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="76A-3C-Kjt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ABB-B7-A3y" kind="relationship" relationship="rootViewController" id="Fnw-ba-jDf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYa-Jh-wio" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-168" y="-147"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
